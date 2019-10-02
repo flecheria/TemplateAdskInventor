@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <assemblyIdentity name="AdvanceObjExport" version="1.0.0.0"></assemblyIdentity>
+
+  <clrClass clsid="{7c9049d9-5078-404d-85b1-326b28c3fe95}" progid="AdvanceObjExport.StandardAddInServer" threadingModel="Both" name="AdvanceObjExport.StandardAddInServer" runtimeVersion=""></clrClass>
+
+  <file name="AdvanceObjExport.dll" hashalg="SHA1"></file>
+
+</assembly>

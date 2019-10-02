@@ -1,0 +1,14 @@
+<Addin Type="Standard">
+  <!--Created for Autodesk Inventor Version 22.0-->
+  <ClassId>{7c9049d9-5078-404d-85b1-326b28c3fe95}</ClassId>
+  <ClientId>{7c9049d9-5078-404d-85b1-326b28c3fe95}</ClientId>
+  <DisplayName>TemplateAdskInventor</DisplayName>
+  <Description>TemplateAdskInventor</Description>
+  <Assembly>TemplateAdskInventor.dll</Assembly>
+  <LoadOnStartUp>1</LoadOnStartUp>
+  <UserUnloadable>1</UserUnloadable>
+  <Hidden>0</Hidden>
+  <SupportedSoftwareVersionGreaterThan>21..</SupportedSoftwareVersionGreaterThan>
+  <DataVersion>1</DataVersion>
+  <UserInterfaceVersion>1</UserInterfaceVersion>
+</Addin>
