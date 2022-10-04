@@ -1,4 +1,7 @@
-# Advance OBJ Export
-Project template for addin creation inside Autodesk Inventor (starting from Inventor 2018, but maybe it works also for other lower version).
+# Autodesk Inventor Addin Template for Microsoft VisualStudio
 
-Build with Microsoft Visual Studio 2017.
+Project template for addin creation inside Autodesk Inventor (starting from Inventor 2018, but it works also for other lower version).
+
+Zip all files inside TemplateAdskInventor.zip and put it inside C:\Users\info\Documents\Visual Studio [version]\Templates\ProjectTemplates
+
+Build with Microsoft Visual Studio 2022.
