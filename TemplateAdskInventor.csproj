@@ -4,7 +4,7 @@
     <ProjectType>Local</ProjectType>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{$guid2$}</ProjectGuid>
+    <ProjectGuid>{F15381B9-C6AC-4E8F-9F82-E014612A9597}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ApplicationIcon>
@@ -153,18 +153,23 @@
   <ItemGroup>
     <None Include="Resources\Button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AddinManifest\Debug\" />
+    <Folder Include="AddinManifest\Release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>@REM remove addin folder before build
 rmdir "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /Q /S</PreBuildEvent>
-    <PostBuildEvent>REM call "%25VS140COMNTOOLS%25vsvars32" mt.exe -manifest "$(ProjectDir)AdvanceObjExport.X.manifest" -outputresource:"$(TargetPath)";#2
+    <PostBuildEvent>REM copy inventor addin manifest to Application Plugins Data
+if $(ConfigurationName) == Debug (
+    echo D | xcopy "$(ProjectDir)\AddinManifest\DebugManifest\Autodesk.$(ProjectName).Inventor.addin" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F
+) ELSE (
+    echo D | xcopy "$(ProjectDir)\AddinManifest\ReleaseManifest\Autodesk.$(ProjectName).Inventor.addin" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F
+)
 
-REM XCopy "$(TargetPath)" "%25AppData%25\Autodesk\ApplicationPlugins\$(TargetName)\" /Y /R
 
-REM XCopy "$(ProjectDir)Autodesk.$(ProjectName).Inventor.addin" "%25AppData%25\Autodesk\ApplicationPlugins\$(TargetName)\" /Y /R
-
-
-echo D | xcopy "$(ProjectDir)Autodesk.$(ProjectName).Inventor.addin" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F
-echo D | xcopy "$(TargetDir)\$(TargetFileName)" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F</PostBuildEvent>
+REM echo D | xcopy "$(ProjectDir)Autodesk.$(ProjectName).Inventor.addin" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F
+REM echo D | xcopy "$(TargetDir)\$(TargetFileName)" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F</PostBuildEvent>
   </PropertyGroup>
 </Project>
