@@ -6,6 +6,19 @@ Zip all files inside TemplateAdskInventor.zip (without README ang .gitignore fil
 
 Build with Microsoft Visual Studio 2022.
 
+## Before build
+
+1 - rename Debug.Autodesk.[Project Name].Inventor to Autodesk.[Project Name].Inventor inside AddinManifest/Debug/
+2 - update assembly path inside AddinManifest/Debug/Autodesk.[Project Name].Inventor
+
+```xml
+<Assembly>path to bin\x64\Debug\$safeprojectname$.dll</Assembly>
+```
+
+3 - set application for debug
+
+![Application for Debug](ExcludeFromProject/DebugSetup.png)  
+
 ## Reference
 
 [Template parameters](https://learn.microsoft.com/en-us/visualstudio/ide/template-parameters?view=vs-2022)  
