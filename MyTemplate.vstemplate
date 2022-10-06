@@ -22,6 +22,7 @@
     <Project TargetFileName="$safeprojectname$.csproj" File="TemplateAdskInventor.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Autodesk.$safeprojectname$.Inventor.addin">Autodesk.TemplateAdskInventor.Inventor.addin</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Debug.Autodesk.$safeprojectname$.Inventor.addin">Debug.Autodesk.TemplateAdskInventor.Inventor.addin</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
