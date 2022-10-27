@@ -140,10 +140,8 @@
     <None Include="$safeprojectname$.X.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Autodesk.$safeprojectname$.Inventor.addin" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Readme.txt" />
+    <None Include="AddinManifest\DebugManifest\Debug.Autodesk.TemplateAdskInventor.Inventor.addin" />
+    <None Include="AddinManifest\ReleaseManifest\Autodesk.TemplateAdskInventor.Inventor.addin" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -154,10 +152,7 @@
   <ItemGroup>
     <None Include="Resources\Button.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AddinManifest\Debug\" />
-    <Folder Include="AddinManifest\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>@REM remove addin folder before build
@@ -169,8 +164,7 @@ if $(ConfigurationName) == Debug (
     echo D | xcopy "$(ProjectDir)\AddinManifest\ReleaseManifest\Autodesk.$(ProjectName).Inventor.addin" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F
 )
 
-
-REM echo D | xcopy "$(ProjectDir)Autodesk.$(ProjectName).Inventor.addin" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F
-REM echo D | xcopy "$(TargetDir)\$(TargetFileName)" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F</PostBuildEvent>
+REM copy main dll
+echo D | xcopy "$(TargetDir)\$(TargetFileName)" "%25AppData%25\Autodesk\ApplicationPlugins\$(ProjectName)" /S /Q /Y /F</PostBuildEvent>
   </PropertyGroup>
 </Project>
