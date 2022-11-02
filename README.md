@@ -118,7 +118,7 @@ SupportedSoftwareVersionNotEqualTo - (Optional) Specifies the version(s) of Inve
 
 DataVersion - (Optional) Specifies the version of add-in data contained within Inventor documents that this version of the add-in supports. This is used by add-ins that store migrating data in Inventor documents, which is indicated by the "DocumentInterests" set on the document.
 
-UserInterfaceVersion - (Optional) Specifies the version of the add-in's user interface. Changing this version results in all of the add-in�s UI getting cleaned up during Inventor start-up.
+UserInterfaceVersion - (Optional) Specifies the version of the add-in's user interface. Changing this version results in all of the add-in's UI getting cleaned up during Inventor start-up.
 
 Below elements are specifically for translator add-ins.
 
